@@ -1,0 +1,290 @@
+{
+	"info": {
+		"_postman_id": "998a619d-b1ac-49c7-870a-eaadbc790db6",
+		"name": "RECOMAI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "4876080"
+	},
+	"item": [
+		{
+			"name": "case",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3000/case"
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3000/case/1"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"A case to cover\",\r\n    \"description\": \"Details for the model.\"\r\n}"
+						},
+						"url": "localhost:3000/case"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"A case to cover\",\r\n    \"description\": \"Details for the model.\"\r\n}"
+						},
+						"url": "localhost:3000/case/2"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:3000/case/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3000/categories"
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3000/categories/2"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"A particular category of the case\",\r\n  \"threshold\": 7.0,\r\n  \"description\": \"Details for the model\",\r\n  \"caseId\": 1,\r\n  \"Tags\": [\r\n    {\r\n        \"name\": \"Some tag\",\r\n        \"description\": \"Some description\"\r\n    }\r\n  ]\r\n}"
+						},
+						"url": "localhost:3000/categories"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"A particular category of the case\",\r\n  \"threshold\": 7.0,\r\n  \"description\": \"Details for the model\",\r\n  \"caseId\": 1\r\n}"
+						},
+						"url": "localhost:3000/categories/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:3000/categories/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tag",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3000/tags"
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3000/tags/1"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Some tag 3\",\r\n    \"description\": \"Some description\"\r\n}"
+						},
+						"url": "localhost:3000/tags"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Some tag updated\",\r\n    \"description\": \"Some description\"\r\n}"
+						},
+						"url": "localhost:3000/tags/3"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:3000/tags/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "information",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3000/information"
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3000/information/1"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"Some information from the user\",\r\n    \"status\": \"MANUAL\",\r\n    \"caseId\": 1,\r\n    \"tagIds\": [1]\r\n}"
+						},
+						"url": "localhost:3000/information"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"Some information from the user updated\",\r\n    \"status\": \"MANUAL\",\r\n    \"caseId\": 1,\r\n    \"tagIds\": [1]\r\n}"
+						},
+						"url": "localhost:3000/information/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:3000/information/3"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
